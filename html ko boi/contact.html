@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<style>
+/* IMPROVED CONTACT TRANSITION (SMOOTH SLIDE + FADE) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00adb5, #222831);
+    color: white;
+    text-align: center;
+
+    animation: contactIn 0.8s ease-out;
+}
+
+@keyframes contactIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* NAV */
+nav {
+    padding: 15px;
+    background: rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.card:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* TEXT */
+h1 {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h1>Contact Me</h1>
+
+    <div class="card">
+        <p><strong>Email:</strong> guerratimothyjames@gmail.com</p>
+
+        <p><strong>Facebook:</strong> 
+            <a href="https://facebook.com/tmtyzbsj" target="_blank">
+               @tmtyzbsj
+            </a>
+        </p>
+
+        <p><strong>Instagram:</strong> 
+            <a href="https://instagram.com/tmtyyyyyy" target="_blank">
+                @tmtyyyyyy
+            </a>
+        </p>
+
+        <p><strong>TikTok:</strong> 
+            <a href="https://www.tiktok.com/@zxcitambeiskaqk" target="_blank">
+                @zxcitambeiskaqk
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- GLOBAL PAGE EXIT TRANSITION (MATCH ALL PAGES) -->
+<script>
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e) {
+        if (this.href.includes(".html")) {
+            e.preventDefault();
+
+            document.body.style.transition = "0.5s ease";
+            document.body.style.opacity = "0";
+            document.body.style.transform = "translateY(20px)";
+
+            setTimeout(() => {
+                window.location = this.href;
+            }, 350);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

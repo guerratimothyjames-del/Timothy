@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+
+<style>
+/* DIFFERENT PAGE TRANSITION (FADE + SLIGHT LIFT) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #222831, #00adb5);
+    color: white;
+    text-align: center;
+
+    animation: pageFade 0.8s ease-out;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* NAV */
+nav {
+    padding: 15px;
+    background: rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
+}
+
+/* TITLE */
+h1 {
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* PROJECT CARD (STAGGER ANIMATION) */
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    text-align: left;
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardIn 0.6s ease forwards;
+    transition: 0.4s;
+}
+
+/* delay each card */
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes cardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.15);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #00ffcc;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00c9a7;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<h1>My Projects</h1>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Grading System Application (Java)</h2>
+        <p>
+            A group project for ITE 186 that calculates student grades by taking input scores and automatically computing the average and final result.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Simple Portfolio Website</h2>
+        <p>
+            A basic personal website created using HTML and CSS that includes a navigation bar for switching between pages like Home, About, Projects, and Contact. It also uses hyperlinks for social media and email contact.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Login Form Interface (HTML & CSS)</h2>
+        <p>
+         A basic login page UI with username and password input fields and a styled submit button. This project focuses on clean design, layout structure, and user interface styling.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
